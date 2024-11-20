@@ -4,7 +4,7 @@ import time
 import os
 
 # Constants
-TARGET_IP = "216.122.175.239"
+TARGET_IP = "YOUR NORDLAYER IP"
 NORD_APP_PATH = r"C:\Program Files (x86)\NordLayer\NordLayer.exe"  # Path to NordLayer executable
 NORD_STOP_COMMAND = r"taskkill /IM NordLayer.exe /F"  # Command to stop NordLayer
 
