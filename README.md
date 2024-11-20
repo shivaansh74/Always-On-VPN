@@ -1,58 +1,57 @@
-NordLayer VPN Connection Monitor -
+# NordLayer VPN Connection Monitor
 
-This script monitors your VPN connection to ensure it remains connected to a specified target IP address. If the connection is lost, it automatically restarts the NordLayer application to reestablish the connection.
+This Python script continuously monitors your VPN connection to ensure it remains connected to a specified target IP address. If the connection is lost, the script automatically restarts the NordLayer application to reestablish the VPN connection.
 
-Features -
+## Features
 
-Continuously checks the public IP address to verify VPN connectivity.
+- **Continuous VPN Connectivity Check:** Monitors your public IP address to ensure it's connected to the target VPN.
+- **Automatic Restart of NordLayer:** If the VPN connection is lost, the script automatically restarts the NordLayer application to reconnect.
+- **Lightweight Solution:** A simple and effective way to ensure persistent VPN connectivity without manual intervention.
 
-Automatically restarts the NordLayer application if disconnected from the target VPN.
+## Prerequisites
 
-Simple and lightweight solution for ensuring persistent VPN connectivity.
+Before running this script, ensure the following:
 
-Prerequisites -
+- **Python 3.8+** installed on your system.
+- **NordLayer** VPN client installed and properly configured.
+- A valid VPN connection configured with the target IP address.
 
-Python 3.8 or newer installed on your system.
+## Setup Instructions
 
-NordLayer installed on your system.
+1. Clone this repository:
 
-A valid VPN connection configured with your target IP address.
+    ```bash
+    git clone https://github.com/shivaansh74/Always-On-VPN
+    ```
 
-Setup Instructions -
+2. Navigate to the repository folder:
 
-Clone this repository by running git clone https://github.com/shivaansh74/Always-On-VPN.
+    ```bash
+    cd Always-On-VPN
+    ```
 
-Navigate to the repository folder using cd Always-On-VPN.
+3. Install the required Python dependencies:
 
-Install the required Python package using pip install requests.
+    ```bash
+    pip install requests
+    ```
 
-Update the following variables in the script as needed:
+4. Update the following variables in the script as needed:
 
-  TARGET_IP: Your target VPN IP address.
+    - **TARGET_IP:** The IP address of your target VPN server.
+    - **NORD_APP_PATH:** Path to the NordLayer executable on your system.
+    - **NORD_STOP_COMMAND:** The command used to stop the NordLayer application (a default command is provided).
 
-  NORD_APP_PATH: Path to the NordLayer executable on your system.
-  
-  NORD_STOP_COMMAND: Command to stop NordLayer (default provided).
+## Usage
 
-Usage -
+Run the script to start monitoring your VPN connection:
 
-Run the script to start monitoring your VPN connection by executing python vpn_monitor.py.
+```bash
+python vpn_monitor.py
+```
 
-The script will:
-
-Check the current public IP address.
-
-Restart NordLayer if not connected to the target VPN.
-
-Notes -
-
-Ensure that the NordLayer executable path is correctly specified.
-
-Run the script with sufficient permissions if required to manage applications.
-
-License -
-
+## License 
 This project is licensed under the MIT License.
 
-Contact -
+## Contact
 For issues or suggestions, please contact Shivaansh Dhingra at shivi@datafysystems.com.
